@@ -11,9 +11,12 @@ Analysis of episodes from HBO's Last Week Tonight with John Oliver
 * Identify corresponding videos from LWT's YouTube channel (only focusing on "Main Segments")
 * Collect URL and video info from each identified YouTube video
 * Merge the Wikipedia and YouTube data
+* Download the audio from the corresponding YouTube videos as mp3s (youtube-dl)^
 * Convert the YouTube video to text using AWS's Transcribe
 * Identify cuss words used in LWT epsidoes
 * Test correlation between cuss words 
+
+^ Got throttled after downloading 69 videos...
 
 ### Cloud Dependencies
 * Using GCP's YouTube API which requires creating key
@@ -28,3 +31,4 @@ Episodes of HBO's LastWeekTonight air on Sundays. I confirmed all episode's air 
 
 The corresponding video for the main segment on YouTube doesn't appear until Monday. LWT also publishes other content to their YouTube channel like web exclusives, special segments like "how is this still a thing" official trailers and extended interviews. I want to exclude this additional content since I'm only focused on main segments.
 
+### 
