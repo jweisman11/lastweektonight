@@ -62,3 +62,25 @@ def fetch_all_youtube_videos(channel_id, api_key):
         else:
             next_page_token = next_page['nextPageToken']
     return res
+
+
+import os
+import youtube_dl
+
+def download_youtube_video_mp3(url, filename):
+    '''Downloads a YouTube video as mp3 to target directory'''
+    if not os.path.exists('../audio'):
+        os.mkdir('../audio')
+    
+    ydl_opts = {
+        'outtmpl': f'audio/{filename}.mp3',
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }],
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+    return True
