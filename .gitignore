@@ -1,8 +1,10 @@
 .git
 asr
 audio
+audio_mp3
 images
 .ipynb_checkpoints
 reference/youtube_api_key.txt
 __pycache__
 reference/aws*
+

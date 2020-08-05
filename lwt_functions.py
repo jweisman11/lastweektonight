@@ -68,7 +68,7 @@ import os
 import youtube_dl
 
 def download_youtube_video_mp3(url, filename):
-    '''Downloads a YouTube video as mp3 to target directory'''
+    '''Download a YouTube video to target directory'''
     if not os.path.exists('../audio'):
         os.mkdir('../audio')
     
